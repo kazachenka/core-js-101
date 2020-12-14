@@ -20,14 +20,14 @@
  *    console.log(r.height);      // => 20
  *    console.log(r.getArea());   // => 200
  */
-function Rectangle( width, height ) {
+function Rectangle(width, height) {
   return {
-    width : width,
-    height : height,
-    getArea(){
-     return this.width * this.height
-    } 
-  }
+    width,
+    height,
+    getArea() {
+      return this.width * this.height;
+    },
+  };
 }
 
 
@@ -41,8 +41,8 @@ function Rectangle( width, height ) {
  *    [1,2,3]   =>  '[1,2,3]'
  *    { width: 10, height : 20 } => '{"height":10,"width":20}'
  */
-function getJSON( obj ) {
-  return JSON.stringify(obj)
+function getJSON(obj) {
+  return JSON.stringify(obj);
 }
 
 
@@ -57,9 +57,9 @@ function getJSON( obj ) {
  *    const r = fromJSON(Circle.prototype, '{"radius":10}');
  *
  */
-function fromJSON( proto, json ) {
-  let res = new proto();
-  return res(JSON.parse(json))
+function fromJSON(proto, json) {
+  const res = new proto();
+  return res(JSON.parse(json));
 }
 
 
@@ -118,32 +118,32 @@ function fromJSON( proto, json ) {
  */
 
 const cssSelectorBuilder = {
-  element( value ) {
-    console.log(value)
-   return value;
-  }, 
-
-  id( value ) {
-   return `#${value}`;
+  element(value) {
+    console.log(value);
+    return value;
   },
 
-  class( value ) {
-   return `.${value}`;
+  id(value) {
+    return `#${value}`;
   },
 
-  attr( value ) {
-   return `[${value}]`;
+  class(value) {
+    return `.${value}`;
   },
 
-  pseudoClass( value ) {
-   return `:${value}`;
+  attr(value) {
+    return `[${value}]`;
   },
 
-  pseudoElement( value ) {
-   return `::${value}`;
+  pseudoClass(value) {
+    return `:${value}`;
   },
 
-  combine( selector1, combinator, selector2 ) {
+  pseudoElement(value) {
+    return `::${value}`;
+  },
+
+  combine(selector1, combinator, selector2) {
     return `${selector1}${combinator}${selector2}`;
   },
 };

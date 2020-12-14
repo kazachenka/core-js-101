@@ -44,10 +44,10 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction( exponent ) {
+function getPowerFunction(exponent) {
   return function (x) {
-    return x**exponent;
-  }
+    return x ** exponent;
+  };
 }
 
 
@@ -64,8 +64,8 @@ function getPowerFunction( exponent ) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom(a,b,c) {
-  return a * x**2 + b * x + c
+function getPolynom(a, b, c) {
+  return a * x ** 2 + b * x + c;
 }
 
 
