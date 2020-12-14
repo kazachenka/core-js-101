@@ -34,7 +34,7 @@ function concatenateStrings( value1, value2 ) {
  *   'b'     => 1
  *   ''      => 0
  */
-function getStringLength( value ) {
+function getStringLength(value) {
   return value.length
 }
 
@@ -65,9 +65,7 @@ function getStringFromTemplate( firstName, lastName ) {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-function extractNameFromTemplate( value ) {
-  return value.slice(7,value.length-1);
-}
+const extractNameFromTemplate = (value) => value.slice(7, value.length - 1);
 
 
 /**
