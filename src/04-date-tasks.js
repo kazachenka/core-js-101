@@ -54,7 +54,7 @@ function parseDataFromIso8601(value) {
  *    Date(2015,1,1)    => false
  */
 function isLeapYear(date) {
-  return new Date(date.getFullYear(), 1, 29).getMonth() == 1;
+  return new Date(date.getFullYear(), 1, 29).getMonth() === 1;
 }
 
 
@@ -77,6 +77,7 @@ function timeSpanToString(startDate, endDate) {
   const Hours = endDate.getHours() - startDate.getHours() < 10 ? `0${endDate.getHours() - startDate.getHours()}` : `${endDate.getHours() - startDate.getHours()}`;
   const Minutes = endDate.getMinutes() - startDate.getMinutes() < 10 ? `0${endDate.getMinutes() - startDate.getMinutes()}` : `${endDate.getMinutes() - startDate.getMinutes()}`;
   const Seconds = endDate.getSeconds() - startDate.getSeconds() < 10 ? `0${endDate.getSeconds() - startDate.getSeconds()}` : `${endDate.getSeconds() - startDate.getSeconds()}`;
+  // eslint-disable-next-line no-nested-ternary
   const Milliseconds = endDate.getMilliseconds() - startDate.getMilliseconds() < 100
     ? endDate.getMilliseconds() - startDate.getMilliseconds() < 10
       ? `00${endDate.getMilliseconds() - startDate.getMilliseconds()}`

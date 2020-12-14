@@ -58,6 +58,7 @@ function getJSON(obj) {
  *
  */
 function fromJSON(proto, json) {
+  // eslint-disable-next-line new-cap
   const res = new proto();
   return res(JSON.parse(json));
 }
@@ -119,7 +120,6 @@ function fromJSON(proto, json) {
 
 const cssSelectorBuilder = {
   element(value) {
-    console.log(value);
     return value;
   },
 

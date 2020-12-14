@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-expressions */
 /* *************************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
@@ -267,8 +269,6 @@ function reverseInteger(/* num */) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(/* ccn */) {
-  // const res = ((ccn+'').split('').reverse().map((e,i) => i % 2 === 0 ? e * 2 : +e).slice(1).map(e => e >= 10 ? e - 9 : e).reduce((a,e) => a + e) * 9) % 10;
-  // return (ccn+'').split('').reverse()[0] === res+'' ? true : false;
   throw new Error('Not implemented');
 }
 
@@ -378,8 +378,8 @@ function getCommonDirectoryPath(/* pathes */) {
  *
  */
 function getMatrixProduct(m1, m2) {
-  const arr = Array(m1.length).fill(Array(m2[0].length));
-  return m1.map();
+  // const arr = Array(m1.length).fill(Array(m2[0].length));
+  return m1.map(m2);
 }
 
 

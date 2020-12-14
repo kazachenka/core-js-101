@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-undef */
 /* *********************************************************************************************
  *                                                                                             *
  * Plese read the following tutorial before implementing tasks:                                *

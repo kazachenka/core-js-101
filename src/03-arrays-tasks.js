@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-return-assign */
 /* ********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
@@ -36,6 +38,7 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
+  // eslint-disable-next-line no-param-reassign
   return Array(len).fill(1).map((e, i) => e += i * 2);
 }
 
@@ -351,6 +354,7 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
+  // eslint-disable-next-line no-mixed-operators
   return arr.filter((e) => e === null || e === undefined || e === 0 || e === '' || e === false || isNaN(e) && e !== 'false').length;
 }
 
@@ -455,6 +459,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
+  // eslint-disable-next-line no-param-reassign
   return Array(end - start + 1).fill(start).map((e, i) => e += i);
 }
 
@@ -505,7 +510,8 @@ function distinct(arr) {
  *    "Poland" => ["Lodz"]
  *   }
  */
-function group(array, keySelector, valueSelector) {
+function group(/* array, keySelector, valueSelector */) {
+  throw new Error('Not implemented');
 }
 
 
@@ -563,8 +569,13 @@ function getElementByIndexes(/* arr, indexes */) {
  *
  */
 function swapHeadAndTail(arr) {
-  let res = [];
-  return arr.length % 2 === 1 ? res = [...arr.slice(Math.ceil(arr.length / 2)), arr[Math.trunc(arr.length / 2)], ...arr.slice(0, Math.trunc(arr.length / 2))]
+  // eslint-disable-next-line no-undef
+  res = [];
+  // eslint-disable-next-line no-undef
+  return arr.length % 2 === 1 ? res = [...arr.slice(Math.ceil(arr.length / 2)),
+    arr[Math.trunc(arr.length / 2)],
+    ...arr.slice(0, Math.trunc(arr.length / 2))]
+    // eslint-disable-next-line no-undef
     : res = [...arr.slice(arr.length / 2), ...arr.slice(0, arr.length / 2)];
 }
 
