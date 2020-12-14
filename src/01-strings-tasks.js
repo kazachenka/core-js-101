@@ -283,7 +283,6 @@ const encodeToRot13 = (str) => {
  */
 // eslint-disable-next-line no-unneeded-ternary
 const isString = ((value) => (typeof ('' + value) === 'string' && ('' + value) !== '' && value != undefined) ? true : false);
-// (typeof `${value}` === 'string' && `${value}` !== '' && value !== undefined ? true : false);
 
 
 /**
